@@ -231,6 +231,19 @@ body{
     transform: translateY(-8px);
     background-color: #3b82f6;
 }
+
+.portfolio{
+    padding: 100px 10%;
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+.portfolio-filters{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
 /*mobile*/
 
 @media (max-width:768px){
