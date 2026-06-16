@@ -54,7 +54,7 @@ window.addEventListener('scroll', () =>{
 const form = document.querySelector('.contact-form');
 
 form.addEventListener('submit', e =>{
-    e.defaultPrevented();
+    e.preventDefault();
 
     alert('Thank you! Your message has been sent.');
      
@@ -82,4 +82,57 @@ topBtn.addEventListener('click', () =>{
         top:0,
         behavior:'smooth'
     });
+});
+
+
+const filterBtns =
+document.querySelectorAll('.filter-btn');
+
+const projects =
+document.querySelectorAll('.project-card');
+
+filterBtns.forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+        const filter =
+        btn.dataset.filter;
+
+        filterBtns.forEach(b =>
+            b.classList.remove('active')
+        );
+
+        btn.classList.add('active');
+
+        projects.forEach(project => {
+
+            const category =
+            project.dataset.category;
+
+            if(
+                filter === 'all' ||
+                filter === category
+            ){
+                project.style.display =
+                    'block';
+            }
+            else{
+                project.style.display =
+                    'none';
+            }
+
+        });
+
+    });
+
+});
+
+const hamburger =
+document.querySelector('.hamburger');
+
+const navLinks =
+document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
 });
