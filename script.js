@@ -1,3 +1,4 @@
+console.log("js loaded");
 const reveals=document.querySelectorAll('.reveal');
 
 window.addEventListener('scroll', () => {

@@ -499,8 +499,12 @@ footer{
 @media (max-width:768px){
     
     .navbar{
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        position: relative;
+        
     }
     .nav-links{
         flex-wrap: wrap;
@@ -526,20 +530,41 @@ footer{
     }
     .hamburger{
         display: block;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
     }
     .nav-links{
+        display: none;
+    }
+    .nav-btn{
         display: none;
     }
     .nav-links.active{
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 80px;
+        top: 100%;
         left: 0;
         width: 100%;
         background-color: #0f172a;
         padding: 30px;
         text-align: center;
+        gap: 20px;
+        text-align: center;
+        z-index: 1000;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    .nav-links.active a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+    }
+    .nav-links.active a:hover{
+    color: #60a5fa;
+    }
+    .contact-container{
 
+        grid-template-columns: 1fr;
     }
 }
