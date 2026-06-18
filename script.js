@@ -137,3 +137,19 @@ document.querySelector('.nav-links');
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
+
+const progressBar = document.getElementById('progress-bar');
+
+window.addEventListener('scroll', () => {
+
+    const scrollTop = window.scrollY;
+
+    const docHeight =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+    const progress =
+        (scrollTop / docHeight) * 100;
+
+    progressBar.style.width = progress + '%';
+});

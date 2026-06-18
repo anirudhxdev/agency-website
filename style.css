@@ -493,6 +493,17 @@ footer{
     font-size: 2rem;
     cursor: pointer;
 }
+/*process bar*/
+#process-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: #2a5ec6;
+    z-index: 9999;
+    transition: width 0.1s linear;
+}
 /*mobile*/
 
 
